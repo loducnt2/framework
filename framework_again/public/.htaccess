@@ -1,0 +1,11 @@
+#Bật chế độ RewriteEngine của htaccess
+RewriteEngine On
+
+#2 điều kiện để áp dụng htaccess
+	#Cái request không trỏ đến file thực thi thật; -f : Kiểm tra file có tồn tại hay không?
+	#Cái request không trỏ đến thư mục thật : -d kiểm tra xem thư mục có tồn tại hay không?
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#Tự động gám file index.php vào trước cái url để thực thi, nhưng ko hiển thị trên url (Ẩn) (Cụ thể là trước public)
+RewriteRule ^ index.php [L,QSA]

@@ -1,0 +1,18 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title'); ?>
+ Danh sách sản phẩm
+<?php $this->stopSection(); ?>
+
+<?php $this->startSection('content'); ?>
+	<form action="/www/framework_again/public/product/insert" method="POST">
+ Tên: <input type="text" name="name" placeholder="Tên sản phẩm...">
+ <br><br>
+ Giá: <input type="text" name="price" placeholder="Giá...">
+ <br><br>
+ Miêu tả: <input type="text" name="description" placeholder="Miêu tả...">
+ <br><br>
+ <input type="submit" value="Tạo mới">
+	</form>
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('views.layouts.main'); } ?>

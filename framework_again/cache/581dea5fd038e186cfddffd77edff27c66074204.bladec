@@ -1,0 +1,18 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('title'); ?>
+ Danh sách sản phẩm
+<?php $this->stopSection(); ?>
+
+<?php $this->startSection('content'); ?>
+	<h1>hello blade</h1>
+	
+	<?php if($abc == 'abc'): ?>
+ <?php echo static::e($abc); ?>
+
+	<?php else: ?>
+ <?php echo static::e('Vào else nhé'); ?>
+
+	<?php endif; ?>
+<?php $this->stopSection(); ?>
+<?php if (@$_shouldextend[1]) { echo $this->runChild('views.layouts.main'); } ?>

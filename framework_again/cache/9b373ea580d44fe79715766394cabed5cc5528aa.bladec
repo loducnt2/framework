@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>All Query Builder</title>
+	<style type="text/css">
+ th{
+ width: 150px;
+ }
+	</style>
+</head>
+<body>
+	<h1>Danh sách tài khoản</h1>
+	<p><a href="http://localhost:8080/www/framework_again/public/product/insert">Thêm mới sản phẩm</a></p>
+	<br>
+	<table>
+ <tr>
+ <th> ID </th>
+ <th> Username </th>
+ <th> Password </th>
+ <th>Name</th>
+ <th>Tùy chọn</th>
+ </tr>
+	<?php 
+ foreach($products as $value){
+ ?>
+ <tr>
+ <td><?php echo $value['id']; ?></td>
+ <td><?php echo $value['name']; ?></td>
+ <td><?php echo $value['price']; ?></td>
+ <td><?php echo $value['description']; ?></td>
+ <td>
+ <a href="http://localhost:8080/www/framework_again/public/product/update/<?php echo $value['id'];  ?>">Sửa</a> |
+ <a href="http://localhost:8080/www/framework_again/public/product/delete/<?php echo $value['id'];  ?>" onclick="return confirm('Bạn chắc muốn xóa tài khoản này?')">Xóa</a>
+ </td>
+ </tr>
+	<?php 
+ }
+	 ?>
+
+	 </table>
+	 <br>
+</body>
+</html>

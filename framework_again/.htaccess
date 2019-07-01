@@ -1,0 +1,2 @@
+#Tránh người dùng truy cập vào thư mục gốc: http://localhost:8080/www/my_framework/
+Options All -Indexes
